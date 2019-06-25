@@ -24,16 +24,14 @@ var sum = function(array) {
 var arraySum = function(array) {
   if (array.length === 0) return 0;
   let popped = array.pop();
-  if (Array.isArray(popped)) {
-    return arraySum(popped) + arraySum(array);
-  } else {
-    return popped + arraySum(array);
-  }
-};
+  return Array.isArray(popped) ? arraySum(popped) + arraySum(array) : popped + arraySum(array)
+;};
 
 // 4. Check if a number is even.
 var isEven = function(n) {
+  
 };
+
 
 // 5. Sum all integers below a given integer.
 // sumBelow(10); // 45
