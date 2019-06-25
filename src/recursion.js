@@ -12,11 +12,14 @@ var factorial = function(n) {
 
 };
 
-console.log(factorial(10))
 // 2. Compute the sum of an array of integers.
 // sum([1,2,3,4,5,6]); // 21
 var sum = function(array) {
+  if (array.length === 0) return 0;
+  return array.pop() + sum(array);
 };
+
+ console.log(sum([1,2,3,4,5,6,23]))
 
 // 3. Sum all numbers in an array containing nested arrays.
 // arraySum([1,[2,3],[[4]],5]); // 15
